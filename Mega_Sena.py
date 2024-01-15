@@ -5,8 +5,10 @@ temp = list()
 jogos = list()
 
 for i in range (0,qtd_jogos):
-    for p in range (0,6):
-        temp.append(random.randint(1,60))
+    while len(temp) < 6:
+        num = random.randint(1,60)
+        if num not in temp:
+            temp.append(num)
     jogos.append(temp[:])
     temp.clear()
 
